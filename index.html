@@ -10,49 +10,49 @@
 </head>
 
 <body>
-  <header>
-    <section class="header-top">
-      <h2 class="visually-hidden">Site Info</h2>
-      <ul class="info">
-        <li><a href="#">+1 420-000-6000</a></li>
-        <li><a href="#">hello@website.com</a></li>
-        <li><a href="#">6am - 11pm</a></li>
+  <header class="header"><!--Block-->
+    <section class="header-contacts"><!--Block-->
+      <h2 class="visually-hidden">Our Contacts</h2><!--Block-->
+      <ul class="info"><!--Block-->
+        <li class="info__item"><a class="info__link" href="#">+1 420-000-6000</a></li><!--Element-->
+        <li class="info__item"><a class="info__link" href="#">hello@website.com</a></li><!--Element-->
+        <li class="info__item"><a class="info__link" href="#">6am - 11pm</a></li><!--Element-->
       </ul>
-      <ul class="socials">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Youtube</a></li>
-        <li><a href="#">Viber</a></li>
+      <ul class="socials"><!--Block-->
+        <li class="socials__item"><a class="socials__link" href="#">Facebook</a></li><!--Element-->
+        <li class="socials__item"><a class="socials__link" href="#">Twitter</a></li><!--Element-->
+        <li class="socials__item"><a class="socials__link" href="#">Instagram</a></li><!--Element-->
+        <li class="socials__item"><a class="socials__link" href="#">Youtube</a></li><!--Element-->
+        <li class="socials__item"><a class="socials__link" href="#">Viber</a></li><!--Element-->
       </ul>
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <label for="header-search"></label>
-        <input type="search" name="header-search">
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="get"><!--Block-->
+        <label class="visually-hidden search-form__search-label" for="header-search">Search here</label><!--Element-->
+        <input class="search-form__search-input" type="text" name="header-search">
       </form>
     </section>
-    <section class="header-main">
-      <h2 class="visually-hidden">Main Navigation</h2>
-      <div class="logo">
-        <h3>TripFinder</h3><p>Where your journey begins</p>
+    <section class="header-main"><!--Block-->
+      <h2 class="visually-hidden">Main Navigation</h2><!--Block-->
+      <div class="logo"><!--Block-->
+        <h3 class="logo__maintext">TripFinder</h3><!--Element-->
+        <p class="logo__lead">Where your journey begins</p><!--Element-->
       </div>
-      <nav>
-        <ul class="main-navigation">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Activities</a></li>
-          <li><a href="#">Deals</a></li>
-          <li><a href="#">Contact</a></li>
-        <ul>
+      <nav class="main-navigation"><!--Block-->
+          <a class="main-navigation__link" href="#">Home</a><!--Element-->
+          <a class="main-navigation__link" href="#">Blog</a><!--Element-->
+          <a class="main-navigation__link" href="#">Gallery</a><!--Element-->
+          <a class="main-navigation__link" href="#">Activities</a><!--Element-->
+          <a class="main-navigation__link" href="#">Deals</a><!--Element-->
+          <a class="main-navigation__link" href="#">Contact</a><!--Element-->
       </nav>
     </section>
   </header>
+
   <main>
     <article class="promo">
       <section class="promo-main">
-        <h1>Trip Finder - Your Journey Begins</h1>
-        <b class="promo-promo">Where your journey begins</b>
-        <p> Discover your next great adventure, become an explorer to get started!</p>
+        <h1 class="visually-hidden">Trip Finder - Your Journey Begins</h1>
+        <b class="promo-main__promo">Where your journey begins</b>
+        <p class="promo-main__lead"> Discover your next great adventure, become an explorer to get started!</p>
       </section>
       <footer class="promo-footer">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
