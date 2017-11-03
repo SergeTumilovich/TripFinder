@@ -1,0 +1,205 @@
+
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+/*Big Noodle Titling is a local font*/
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url(../fonts/bignoodletitling.ttf);
+}
+
+/*Desktop version*/
+.content{
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 20px;
+  min-width: 1600px;/*template width*/
+  max-width: 1920px;
+}
+
+/*hides title*/
+.visually-hidden{
+  position: absolute;
+  clip: rect(0,0,0,0);
+  width: 1px;
+  height: 1px;
+}
+
+.header{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.contacts_header{
+  box-sizing: border-box;
+  padding-left: 12.6%;
+  min-height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.42);
+}
+
+.info_header{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  min-width: 38%;
+}
+
+.info__item_header{
+  margin-right: 9.4%;
+}
+
+.info__link_header{
+  color: white;
+  text-decoration: none;
+  font-size: 0.65em;
+}
+
+.info__link_header::before{
+  font-family: FontAwesome;
+  font-size: 1.1em;
+}
+
+.info-phone::before{
+  content:"\f095";
+  margin-right: 20px;
+}
+
+.info-mail::before{
+  content: "\f0e0";
+  margin-right: 10px;
+}
+
+.info-schedule{
+  margin-right: 0;
+}
+
+.info-schedule::before{
+  content: "\f017";
+  margin-right: 12px;
+}
+
+.socials_header{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-right: 3%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  max-width: 39.1%;
+  flex-grow: 1;
+}
+
+.socials__item_header{
+  margin-left: 6.5%;
+  padding-top: 1.6%;
+  height: 5%;
+  font-size: 0;
+  box-sizing: border-box;
+}
+
+.socials__link_header{
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: FontAwesome;
+}
+
+.header-search-form{
+  width: 22.9%;
+  height: 5%;
+  margin: 0;
+  border-left: 1px solid rgba(255,255,255,0.42);
+}
+
+.header-search-form__search-input{
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border: none;
+  font-size: 0.65em;
+  color: white;
+}
+
+.header-search-form__search-input::before{
+  content: "\f002";
+  
+}
+
+.main-menu_header{
+  box-sizing: border-box;
+  padding-top: 1rem;
+  min-height: 4.9rem;
+  padding-left: 17.5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  max-width: 12.5%;
+  height: 8%;
+  position: relative;
+}
+
+.logo__maintext{
+  margin: 0;
+  font-size: 2em;
+  font-family: "Big Noodle Titling";
+  color: #007bff;
+  letter-spacing: 0.05em;
+  line-height: 90%;
+}
+
+.logo__trip{
+  color: white;
+}
+
+.logo__maintext::before{
+  position: absolute;
+  left: -55px; top: 7px;
+  content: "\f1aa";
+  display: inline-block;
+  vertical-align: top;
+  font-family: FontAwesome;
+  font-size: 1.2em;
+  color: white;
+  margin-right: 7.5%;
+}
+
+.logo__addtext{
+  margin: 0;
+  font-size: 0.65em;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  width: 95%;
+  letter-spacing: 0.09em;
+}
+
+.main-navigation{
+  display: flex;
+  padding-top: 1%;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding-right: 17.4%;
+}
+
+.main-navigation-menu{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  max-width: 50.5%;
+}
+
+.main-navigation-menu__item{
+  margin-left:11%;
+}
+
+.main-navigation-menu__link{
+  text-decoration: none;
+  color: white;
+}
