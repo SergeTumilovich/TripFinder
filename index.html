@@ -5,6 +5,7 @@
   <meta name="author" content="Serge Tumilovich aka Jon Snow">
   <meta name="description" content="Learning HTML/CSS template which provides profficient HTML/CSS BEM markup and flexible layout">
   <meta name="keywords" content="activities, journey, tours, deals, surfing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -55,7 +56,7 @@
       <h1 class="visually-hidden promo__title">Trip Finder - Your Journey Begins</h1>
       <section class="promo-main">
         <h2 class="promo-main__title">Where your journey begins.</h2>
-        <b class="promo-main__lead"> Discover your next great adventure, become an explorer to get started!</b>
+        <p class="promo-main__lead"> Discover your next great adventure, become an explorer to get started!</p>
       </section>
       <footer class="promo-footer">
         <p class="promo-footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -66,10 +67,10 @@
         <form class="promo-search" action="https://echo.htmlacademy.ru" method="get">
           <h2 class="promo-search__title">Search Tours</h2>
           <p class="promo-search__lead">Find your dream tour today!</p>
-          <label class="promo-search__label" for="tour">Search tour<input class="promo-search__input" type="text" name="tour" placeholder="Search Tour"></label>
-          <label class="promo-search__label" for="destination">Destination<input class="promo-search__input" type="text" name="destination" placeholder="Destination"></label>
-          <label class="promo-search__label" for="tour-type">Tour Type<input class="promo-search__input" type="text" name="tour-type" placeholder="Tour Type"></label>
-          <label class="promo-search__label" for="search-date">Month<input class="promo-search__input" type="text" name="search-date" placeholder="Month"></label>
+          <label class="promo-search__label visually-hidden" for="tour">Search tour</label><input class="promo-search__input" type="text" name="tour" placeholder="Search Tour">
+          <label class="promo-search__label visually-hidden" for="destination">Destination</label><input class="promo-search__input" type="text" name="destination" placeholder="Destination">
+          <label class="promo-search__label visually-hidden" for="tour-type">Tour Type</label><input class="promo-search__input" type="text" name="tour-type" placeholder="Tour Type">
+          <label class="promo-search__label visually-hidden" for="search-date">Month</label><input class="promo-search__input" type="text" name="search-date" placeholder="Month">
           <button class="btn btn_promo-search" type="submit">Find Tours</button>
         </form>
       </section>
