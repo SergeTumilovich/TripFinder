@@ -12,7 +12,7 @@
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 20px;
   min-width: 1600px;/*template width*/
-  max-width: 1920px;
+  max-width: 1920px;/*max pics width*/
 }
 
 /*hides title*/
@@ -24,17 +24,16 @@
 }
 
 .header{
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
+  left: 0;right: 0; /*no width: 100% for absolute. causes troubles on small screen*/
 }
 
 .contacts_header{
   box-sizing: border-box;
   padding-left: 12.6%;
-  min-height: 2rem;
+  height: 2rem;
   display: flex;
-  justify-content: space-between;
   border-bottom: 1px solid rgba(255,255,255,0.42);
 }
 
@@ -42,12 +41,15 @@
   margin: 0;
   padding: 0;
   display: flex;
+  box-sizing: border-box;
   list-style: none;
+  flex-wrap: wrap;
+  flex-grow: 1;
   min-width: 38%;
 }
 
 .info__item_header{
-  margin-right: 9.4%;
+  margin-right: 6%;
 }
 
 .info__link_header{
@@ -81,21 +83,20 @@
 }
 
 .socials_header{
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  padding-right: 3%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  padding-right: 3%;
   list-style: none;
+  min-width: 15%;
   max-width: 39.1%;
-  flex-grow: 1;
 }
 
 .socials__item_header{
-  margin-left: 6.5%;
-  padding-top: 1.6%;
-  height: 5%;
+  margin-left: 20%;
   font-size: 0;
   box-sizing: border-box;
 }
@@ -107,18 +108,33 @@
   font-family: FontAwesome;
 }
 
+
 .header-search-form{
-  width: 22.9%;
+  width: 22%;
+  position: relative;
+  box-sizing: border-box;
   margin: 0;
   border-left: 1px solid rgba(255,255,255,0.42);
 }
 
 .header-search-form__search-input{
   width: 100%;
+  height: 100%;
   background-color: inherit;
   border: none;
+  box-sizing: border-box;
+  padding-left: 18%;
   font-size: 0.65em;
   color: white;
+}
+
+.header-search-form__search-icon{
+  font-family: fontAwesome;
+  color: white;
+  position: absolute;
+  font-size: 0.75em;
+  top: 20%;
+  left: 13%;
 }
 
 .main-menu_header{
@@ -127,7 +143,6 @@
   min-height: 4.9rem;
   padding-left: 17.5%;
   display: flex;
-  justify-content: space-between;
 }
 
 .logo{
@@ -172,11 +187,11 @@
 }
 
 .main-navigation{
-  display: flex;
   padding-top: 1%;
+  display: flex;
   justify-content: flex-end;
   flex-grow: 1;
-  padding-right: 17.4%;
+  padding-right: 16.3%;
 }
 
 .main-navigation-menu{
@@ -185,12 +200,13 @@
   list-style: none;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   flex-grow: 1;
-  max-width: 50.5%;
+  min-width: 50.5%;
 }
 
 .main-navigation-menu__item{
-  margin-left:11%;
+  margin-left:5.55%;
 }
 
 .main-navigation-menu__link{
@@ -199,31 +215,53 @@
 }
 
 .promo{
-  height: 91%;
+  height: 51.5rem;
   padding-top: 6.82%;
-  background-image: url(../img/promo.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url(../img/promo.jpg) center no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.promo-main{
-  flex-grow: 1;
-  padding-left: 12.5%;
-  max-width: 38.5%;
+.promo-footer{
+  background-color: rgba(71, 160, 255, 0.85);
+  color: #fff;
+  min-height: 24%;
+  display: flex;
+  align-items: center;
+  padding-left: 14%;
+}
 
+.promo-footer-text{
+  width: 43%;
+}
+
+.promo-main{
+  position: relative;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding: 0 14.3% 0 12.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.promo-main-lead{
+  box-sizing: border-box;
+  max-width: 55%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-wrap: wrap;
+  padding-right: 2%;
 }
 
 .promo-main__title{
   margin: 0;
-  margin-top: 45%;
+  margin-top: 45.1%;
   font-family: "Big Noodle Titling";
-  font-size: 2.83em;
+  font-size: 2.85em;
+  font-weight: normal;
   color: white;
   line-height: 1.7em;
   letter-spacing: 0.085em;
@@ -234,36 +272,19 @@
   color: white;
   margin: 0;
   margin-left: 9%;
-}
-
-.promo-footer{
-  background-color: rgba(71, 160, 255, 0.85);
-  color: #fff;
-  min-height: 24%;
-  display: flex;
-  align-items: center;
-  padding-left: 14%;
-  order: 1;
-}
-
-.promo-footer-text{
-  min-height: 7%;
-  max-width: 43%;
-}
-
-.promo-form{
-  position: absolute;
-  width: 32.5%;
-  right: 12.5%;
-  top: 24.1%;
+  margin-top: 0.3%;
 }
 
 .promo-search{
+  position: absolute;
   margin: 0;
+  top: 18%;
   background-color: #fff;
-  height: 64.5vh;
+  width: 32%;
+  right: 14.2%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 2.6%;
 }
 
 .promo-search__title{
@@ -275,7 +296,7 @@
   font-weight: normal;
   margin-top: 5%;
   padding-left: 15.6%;
-  line-height: 1.22em;
+  line-height: 1.21em;
 }
 
 .promo-search__lead{
@@ -285,15 +306,29 @@
   margin-bottom: 5%;
 }
 
+.promo-search__line{
+  display: block;
+  height: 3.5em;
+  position: relative;
+  margin: 0 8% 2% 9%;
+}
+
 .promo-search__input{
   background-color: #f2f2f2;
-  height: 9%;
   border: none;
   border-radius: 10px;
-  margin: 0 9% 5.5%;
-  padding-left: 3.5%;
   font-size: 0.8em;
+  line-height: 3.5em;
   color: #5f5f5f;
+  padding: 0 10% 0 5%;
+  width: 100%;
+}
+
+.promo-search__icon{
+  font-family: FontAwesome;
+  position: absolute;
+  color: #5f5f5f;
+  top: 25%; right: 5%;
 }
 
   /*placeholders*/
@@ -313,8 +348,9 @@
   background-color: #006fe6;
   border: none;
   border-radius: 10px;
-
+  text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   font-weight: bold;
   font-size: 0.8em;
   color: white;
@@ -322,15 +358,16 @@
 }
 
 .btn_promo-search{
-  margin: 0 9% 4%;
+  margin: 0 8% 4% 9%;
 }
 
 .tours{
-  height: 75%;
-  background: url("../img/tour-bg.jpg") center no-repeat,
+  box-sizing: border-box;
+  height: 44.2rem;
+  background: url("../img/tour-bg.jpg") bottom no-repeat,
   rgba(255, 255, 255, 0.71);
-  background-blend-mode: overlay;
-  padding-top: 5%;
+  background-blend-mode: lighten;
+  padding-top: 5.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -349,9 +386,9 @@
 
 .tours__lead{
   margin: 0;
-  margin-top: 1.2%;
+  margin-top: 0.9%;
   color: #5f5f5f;
-  max-width: 60%;
+  max-width: 65%;
   text-align: center;
 }
 
@@ -373,8 +410,7 @@
   box-sizing: border-box;
   margin: 4% 1% 0% 1%;
   border-radius: 50%;
-  width: 29vh;/* help me, Obi-Wan, you're my only hope :) */
-  height: 29vh;
+  width: 270px; height: 270px;/* help me, Obi-Wan, you're my only hope :) */
 }
 
 .tours-list__link{
@@ -414,8 +450,11 @@
   background: url("../img/tour-4.jpg") center;
 }
 
+
 .deals{
-  margin: 0;
+  height: 44.3em;
+  box-sizing: border-box;
+  padding-top: 7%;
   background:
   linear-gradient(to right, rgba(71,160,255,0.85),rgba(71,160,255,0.85)),
   url("../img/deals-bg.jpg") center no-repeat;
@@ -423,4 +462,415 @@
 
 .deals__title{
   margin: 0;
+  font-family: "Big Noodle Titling";
+  color: white;
+  font-size: 2.5em;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.055em;
+}
+
+.deals-list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  padding: 4% 11.5% 0;
+}
+
+.deals-list__item{
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.deal{
+  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-img{
+  height: 35%;
+  background-color: rgba(0, 100, 200, 0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+  order: -2;
+}
+
+.deals-list__item:first-child .deal-img{
+  background-image: url("../img/deal-1.jpg");
+}
+
+.deals-list__item:nth-child(2) .deal-img{
+  background-image: url("../img/deal-2.jpg");
+}
+
+.deals-list__item:last-child .deal-img{
+  background-image: url("../img/deal-3.jpg");
+}
+
+.deal-title{
+  margin: 0;
+  font-family: "Big Noodle Titling";
+  color: #5f5f5f;
+  font-size: 2.5em;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.055em;
+}
+
+.deal-pricing{
+  margin: -5% 30% 4%;
+  padding: 2% 0;
+  order: -1;
+  color: white;
+  background-color: #47a0ff;
+  text-align: center;
+  font-family: "Big Noodle Titling";
+}
+
+.deal-pricing__origin{
+  text-decoration: line-through;
+  font-size: 1.45em;
+}
+
+.deal-pricing__discount{
+  font-size: 1.6em;
+}
+
+.deal-description{
+  font-size: 0.75em;
+  color: #5f5f5f;
+  margin: 4% 8% 5.5%;
+}
+
+.btn_deal{
+  margin: 4% 25% 10%;
+}
+
+.trips{
+  height: 53.5em;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trips__lead{
+  margin: 6.5% 0 6%;
+  font-family: "Big Noodle Titling";
+  color: #5f5f5f;
+  font-size: 2.5em;
+  font-weight: normal;
+  letter-spacing: 0.055em;
+}
+
+.trips-list{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trips-list__item{
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: gray;
+  width: 33%;
+  border: 1px solid white;
+}
+
+.trip{
+  box-sizing: border-box;
+  height: 38%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trips-list__item:first-child .trip{
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) center no-repeat,
+    url("../img/trip-1.jpg");
+}
+
+.trips-list__item:nth-child(2) .trip{
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) center no-repeat,
+    url("../img/trip-2.jpg");
+}
+.trips-list__item:nth-child(3) .trip{
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) center no-repeat,
+    url("../img/trip-3.jpg");
+}
+.trips-list__item:nth-child(4) .trip{
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) center no-repeat,
+    url("../img/trip-4.jpg");
+}
+.trips-list__item:nth-child(5) .trip{
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) center no-repeat,
+    url("../img/trip-5.jpg");
+}
+.trips-list__item:last-child .trip{
+  background:
+
+    linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) center no-repeat,
+    url("../img/trip-6.jpg");
+}
+
+.trip__title{
+  margin: 0;
+  margin-top: 4%;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.trip__description{
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.modal{
+  display: none;
+}
+
+
+.blog{
+  box-sizing: border-box;
+  background-color: #ebebeb;
+  height: 45.5em;
+  padding: 6.2% 12.5% 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog__title{
+  margin: 0;
+  font-family: "Big Noodle Titling";
+  color: #353535;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+}
+
+.blog__lead{
+  margin: 0;
+  margin-top: 2.9%;
+  text-align: center;
+  max-width: 80%;
+}
+
+.blog-events{
+  display: flex;
+  flex-direction:row;
+  margin-top: 5%;
+}
+
+.event{
+  box-sizing: border-box;
+  background: white;
+  margin-right: 2.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event:last-child{
+  margin-right: 0;
+}
+
+.event-img{
+  margin: 2%;
+  order: -1;
+}
+
+.event__title{
+  margin: 7% 0 2% 7%;
+  color: #47a0ff;
+  font-size: 0.9em;
+  align-self: flex-start;
+}
+
+.event-meta{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 6% 7%;
+  color: #5f5f5f;
+  font-size: 0.75em;
+  text-transform: capitalize;
+  align-self: flex-start;
+}
+
+.event-meta__author::before,
+.event-meta__date::before{
+  font-family: FontAwesome;
+  content: "\f007";
+  font-size: 1.33em;
+  margin-right: 10px;
+}
+
+.event-meta__date::before{
+  content: "\f073";
+}
+
+.event-content{
+  font-size: 0.75em;
+  line-height: 1.5em;
+  margin: 3% 10% 15% 7%;
+}
+
+.company{
+  box-sizing: border-box;
+  background-color: #605b23;
+  background: linear-gradient(to right, rgba(0,0,0,0.53), rgba(0,0,0,0.53)),
+  url("../img/company-bg.jpg") bottom no-repeat;
+  height: 35em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company__title{
+  margin: 0;
+  margin-top: 11.3%;
+  font-size: 7.4em;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+  font-family: "Big Noodle Titling";
+  color: white;
+  line-height: 1em;
+}
+
+.company__lead{
+  margin: 0;
+  margin-left: 1%;
+  font-size: 2.5em;
+  font-family: "Big Noodle Titling";
+  font-weight: normal;
+  color: white;
+  letter-spacing: 0.05em;
+  line-height: 0.95em;
+}
+
+.btn_company{
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  margin-top: 1.6%;
+  margin-left: -1.6%;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  height: 20em;
+}
+
+.footer-main{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  padding: 5% 12.5% 0;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.footer-main-llc{
+  width: 31%;
+}
+
+.footer-main-llc__title,
+.support__title, .social__title,
+.subscribe__title{
+  margin: 0 0 10%;
+  font-family: "Big Noodle Titling";
+  font-size: 1.5em;
+  letter-spacing: 0.07em;
+  color: #5f5f5f;
+  font-weight: normal;
+}
+
+.support{
+  width: 20%;
+}
+
+.info_footer{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 2%;
+}
+
+.info__link_footer, .support-options__link{
+  text-decoration: none;
+  color: #5f5f5f;
+  font-size: 0.75em;
+  line-height: 1.7em;
+}
+
+.social{
+  width: 23%;
+}
+
+.socials_footer{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.socials__item_footer{
+  font-size: 0;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: #47a0ff;
+  margin-right: 3%;
+}
+
+.socials__link_footer{
+  font-family: FontAwesome;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  display: block;
+  transform: translateY(60%);
+}
+
+.footer-copyright{
+  display: flex;
+  flex-direction: row;
+}
+
+.support-options{
+  list-style: none;
+  padding: 0;
+}
+
+.subscription-form{
+  display: flex;
+}
+
+.subscription__input{
+  margin-left: 5%;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 10px;
 }

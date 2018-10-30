@@ -5,7 +5,7 @@
   <meta name="author" content="Serge Tumilovich aka Jon Snow">
   <meta name="description" content="Learning HTML/CSS template which provides profficient HTML/CSS BEM markup and flexible layout">
   <meta name="keywords" content="activities, journey, tours, deals, surfing">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -31,6 +31,7 @@
       <form class="header-search-form" action="https://echo.htmlacademy.ru" method="get"><!--Block-->
         <label class="visually-hidden header-search-form__search-label" for="header-search">Search here</label><!--Element-->
         <input class="header-search-form__search-input" type="text" name="header-search">
+        <span class="header-search-form__search-icon fa-search"></span>
       </form>
     </section>
     <section class="main-menu_header"><!--Block-->
@@ -55,25 +56,40 @@
     <article class="promo">
       <h1 class="visually-hidden promo__title">Trip Finder - Your Journey Begins</h1>
       <section class="promo-main">
-        <h2 class="promo-main__title">Where your journey begins.</h2>
-        <p class="promo-main__lead"> Discover your next great adventure, become an explorer to get started!</p>
+        <div class="promo-main-lead">
+          <h2 class="promo-main__title">Where your journey begins.</h2>
+          <p class="promo-main__lead"> Discover your next great adventure, become an explorer to get started!</p>
+        </div>
+        <form class="promo-search" action="https://echo.htmlacademy.ru" method="get">
+          <h2 class="promo-search__title">Search Tours</h2>
+          <p class="promo-search__lead">Find your dream tour today!</p>
+          <p class="promo-search__line">
+            <label class="promo-search__label visually-hidden" for="tour">Search tour</label>
+            <input class="promo-search__input" type="text" name="tour" placeholder="Search Tour">
+            <span class="promo-search__icon fa-search"></span>
+          </p>
+          <p class="promo-search__line">
+            <label class="promo-search__label visually-hidden" for="destination">Destination</label>
+            <input class="promo-search__input" type="text" name="destination" placeholder="Destination">
+            <span class="promo-search__icon fa-plane"></span>
+          </p>
+          <p class="promo-search__line">
+            <label class="promo-search__label visually-hidden" for="tour-type">Tour Type</label>
+            <input class="promo-search__input" type="text" name="tour-type" placeholder="Tour Type">
+            <span class="promo-search__icon fa-bed"></span>
+          </p>
+          <p class="promo-search__line">
+            <label class="promo-search__label visually-hidden" for="search-date">Month</label>
+            <input class="promo-search__input" type="text" name="search-date" placeholder="Month">
+            <span class="promo-search__icon fa-calendar"></span>
+          </p>
+          <button class="btn btn_promo-search" type="submit">Find Tours</button>
+        </form>
       </section>
       <footer class="promo-footer">
         <p class="promo-footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
          Proin ultricies erat mollis metus molestie, quis porta nunc finibus. Phasellus in nibh libero.<p>
       </footer>
-      <section class="promo-form">
-        <h2 class="visually-hidden promo-form__title">Search around our tours</h2>
-        <form class="promo-search" action="https://echo.htmlacademy.ru" method="get">
-          <h2 class="promo-search__title">Search Tours</h2>
-          <p class="promo-search__lead">Find your dream tour today!</p>
-          <label class="promo-search__label visually-hidden" for="tour">Search tour</label><input class="promo-search__input" type="text" name="tour" placeholder="Search Tour">
-          <label class="promo-search__label visually-hidden" for="destination">Destination</label><input class="promo-search__input" type="text" name="destination" placeholder="Destination">
-          <label class="promo-search__label visually-hidden" for="tour-type">Tour Type</label><input class="promo-search__input" type="text" name="tour-type" placeholder="Tour Type">
-          <label class="promo-search__label visually-hidden" for="search-date">Month</label><input class="promo-search__input" type="text" name="search-date" placeholder="Month">
-          <button class="btn btn_promo-search" type="submit">Find Tours</button>
-        </form>
-      </section>
     </article>
     <section class="tours">
       <h2 class="tours__title">Find a tour by tour type</h2>
@@ -91,37 +107,40 @@
         <li class="deals-list__item">
           <div class="deal">
             <h3 class="deal-title">Surfing</h3>
+            <div class="deal-img"></div>
             <p class="deal-pricing">
-              <span class="deal-pricing__origin">899</span>
-              <span class="deal-pricing__discount">499</span>
+              <span class="deal-pricing__origin">$899</span>
+              <span class="deal-pricing__discount">$499</span>
             </p>
             <p class="deal-description">Egestas dignissim a enim lorem a mus egestas risus porta?
              Sed. Scelerisque, in nec velit augue aenean a, vut velit nec! Phasellus aliquam odio. </p>
-             <a class="btn btn_deal" href="#">Buy Now</a>
+             <a class="btn btn_deal" href="#">Book Now</a>
           </div>
         </li>
         <li class="deals-list__item">
           <div class="deal">
             <h3 class="deal-title">Surfing</h3>
+            <div class="deal-img"></div>
             <p class="deal-pricing">
-              <span class="deal-pricing__origin">899</span>
-              <span class="deal-pricing__discount">499</span>
+              <span class="deal-pricing__origin">$899</span>
+              <span class="deal-pricing__discount">$499</span>
             </p>
             <p class="deal-description">Egestas dignissim a enim lorem a mus egestas risus porta?
              Sed. Scelerisque, in nec velit augue aenean a, vut velit nec! Phasellus aliquam odio. </p>
-             <a class="btn btn_deal" href="#">Buy Now</a>
+             <a class="btn btn_deal" href="#">Book Now</a>
           </div>
         </li>
         <li class="deals-list__item">
           <div class="deal">
             <h3 class="deal-title">Surfing</h3>
+            <div class="deal-img"></div>
             <p class="deal-pricing">
-              <span class="deal-pricing__origin">899</span>
-              <span class="deal-pricing__discount">499</span>
+              <span class="deal-pricing__origin">$899</span>
+              <span class="deal-pricing__discount">$499</span>
             </p>
             <p class="deal-description">Egestas dignissim a enim lorem a mus egestas risus porta?
              Sed. Scelerisque, in nec velit augue aenean a, vut velit nec! Phasellus aliquam odio. </p>
-             <a class="btn btn_deal" href="#">Buy Now</a>
+             <a class="btn btn_deal" href="#">Book Now</a>
           </div>
         </li>
       </ul>
@@ -178,6 +197,7 @@
       <h2 class="blog__title">News and Events</h2>
       <p class="blog__lead">Egestas dignissim a enim lorem a mus egestas risus porta?
          Sed. Scelerisque, in nec velit augue aenean a, vut velit nec! Phasellus aliquam odio. </p>
+      <section class="blog-events">
       <article class="event">
         <h3 class="event__title">Living the travel lifestyle</h3>
         <p class="event-meta">
@@ -209,9 +229,10 @@
         <img class="event-img" src="img/event-3.jpg" width="350" height="225" alt="Living the Travel Lifestyle"/>
       </article>
     </section>
+    </section>
     <section class="company">
       <h1 class="company__title">Luxury Travel</h1><!--h1 almost in footer! What a surprise :) -->
-      <b class="company__lead">Peace of ming guaranteed!</b>
+      <b class="company__lead">Peace of mind guaranteed!</b>
       <a class="btn btn_company" href="#">Find Tours</a>
     </section>
   </main>
@@ -221,9 +242,9 @@
       <section class="footer-main-llc">
         <h3 class="footer-main-llc__title">Findfinder LLC</h3>
         <ul class="info_footer">
-          <li class="into__item"><a class="info__link_footer" href="#">1400 Pennsylvania Ave. Washington, DC</a></li>
-          <li class="into__item"><a class="info__link_footer" href="#">P: 24/7 customer support: 1-555-555-5555</a></li>
-          <li class="into__item"><a class="info__link_footer" href="#">E: info@tripfinder.com</a></li>
+          <li class="into__item_footer"><a class="info__link_footer" href="#">1400 Pennsylvania Ave. Washington, DC</a></li>
+          <li class="into__item_footer"><a class="info__link_footer" href="#">P: 24/7 customer support: 1-555-555-5555</a></li>
+          <li class="into__item_footer"><a class="info__link_footer" href="#">E: info@tripfinder.com</a></li>
         </ul>
       </section>
       <section class="support">
@@ -237,16 +258,17 @@
       <section class="social">
         <h3 class="social__title">Follow Us</h3>
         <ul class="socials_footer">
-          <li class="socials__item_footer"><a class="socials__item_footer" href="#">Facebook</a></li>
-          <li class="socials__item_footer"><a class="socials__item_footer" href="#">Twitter</a></li>
-          <li class="socials__item_footer"><a class="socials__item_footer" href="#">Instagram</a></li>
-          <li class="socials__item_footer"><a class="socials__item_footer" href="#">Youtube</a></li>
+          <li class="socials__item_footer"><a class="socials__link_footer fa-facebook" href="#"></a>Facebook</li>
+          <li class="socials__item_footer"><a class="socials__link_footer fa-twitter" href="#"></a>Twitter</li>
+          <li class="socials__item_footer"><a class="socials__link_footer fa-instagram" href="#"></a>Instagram</li>
+          <li class="socials__item_footer"><a class="socials__link_footer fa-youtube" href="#"></a>Youtube</li>
         </ul>
       </section>
       <section class="subscribe">
         <h3 class="subscribe__title">Newsletter</h3>
         <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="subsription-form__label" for="subscription">Enter your email for subscription<input class="subscription__input" type="text" name="subscription"></label>
+          <label class="subsription-form__label visually-hidden" for="subscription">Enter your email for subscription</label>
+          <input class="subscription__input" type="text" name="subscription">
           <button class="btn btn_subscription" type="submit">Submit</button>
         </form>
       </section>
@@ -259,6 +281,4 @@
   </footer>
 </div>
 </body>
-
-
 </html>
